@@ -1,69 +1,46 @@
 # hero-game
 
+## The story  
+Once upon a time there was a great hero, called Orderus, with some strengths and weaknesses,
+as all heroes have.  
+After battling all kinds of monsters for more than a hundred years, Orderus now has random stats.
+Also, he possesses 2 skills:  
+● Rapid strike: Strike twice while it’s his turn to attack; there’s a 10% chance he’ll use this skill
+every time he attacks  
+● Magic shield: Takes only half of the usual damage when an enemy attacks; there’s a 20%
+change he’ll use this skill every time he defends.  
+
+## Gameplay
+As Orderus walks the ever-green forests of Emagia, he encounters some wild beasts with various stats.
+You’ll have to simulate a battle between Orderus and a wild beast, either at command line or
+using a web browser. On every battle, Orderus and the beast must be initialized with random
+properties, within their ranges.  
+The first attack is done by the player with the higher speed. If both players have the same speed,
+than the attack is carried on by the player with the highest luck. After an attack, the players switch
+roles: the attacker now defends and the defender now attacks.  
+The damage done by the attacker is calculated with the following formula:  
+Damage = Attacker strength – Defender defence  
+The damage is subtracted from the defender’s health. An attacker can miss their hit and do no
+damage if the defender gets lucky that turn.  
+Orderus’ skills occur randomly, based on their chances, so take them into account on each turn.  
+
+
+## Game over
+The game ends when one of the players remain without health or the number of turns reaches 20.  
+The application must output the results each turn: what happened, which skills were used (if any),
+the damage done, defender’s health left.  
+If we have a winner before the maximum number of rounds is reached, he must be declared.
+
+##
+To run the game:
+
+> php runGame.php
+
+To run the unit tests (on Windows):
+
+> ./vendor/bin/phpunit.bat
 
 
 Sample output:
 
-___________                      .__
-\_   _____/ _____ _____     ____ |__|____
- |    __)_ /     \\__  \   / ___\|  \__  \
- |        \  Y Y  \/ __ \_/ /_/  >  |/ __ \_
-/_______  /__|_|  (____  /\___  /|__(____  /
-        \/      \/     \//_____/         \/
-
-After battling all kinds of monsters for more than a hundred years, Orderus now has the following stats:
-Health:   86
-Strength: 74
-Defence:  53
-Speed:    7
-Luck:     29
-
-Also, he possesses 2 skills:
-
-Rapid Strike: Strike twice while it's his turn to attack, there's a % he'll use this skill every time he attacks.
-
-Magic shield: Takes only half of the usual damage when an enemy attacks, there's a % change he'll use this skill every time he defends.
-
-As our hero Orderus walks the ever-green forests of Emagia, he encounters a Bear!
-
-    :"'._..---.._.'";
-    `.             .'
-    .'    ^   ^    `.
-   :      a   a      :                 __....._
-   :     _.-0-._     :---'""'"-....--'"        '.
-    :  .'   :   `.  :                          `,`.
-     `.: '--'--' :.'                             ; ;
-      : `._`-'_.'                                ;.'
-      `.   '"'                                   ;
-       `.               .                        ;
-        `.      .        :           .           ;
-         .`.    ;       ;           :           ;
-       .'    `-.'      ;            :          ;`.
-   __.'      .'      .'              :        ;   `.
- .'      __.'      .'`--..__      _._.'      ;      ;
- `......'        .'         `'""'`.'        ;......-'
-       `.......-'                 `........'
-
-Bear hits Orderus for 17 damage leaving them with 69 Health.
-
-Orderus hits Bear for 32 damage leaving them with 37 Health.
-
-Bear hits Orderus for 17 damage leaving them with 52 Health.
-
-Bear got lucky and dodged an attack from Orderus. His current health is 37
-
-Bear hits Orderus for 17 damage leaving them with 35 Health.
-
-Bear got lucky and dodged an attack from Orderus. His current health is 37
-
-Bear hits Orderus for 17 damage leaving them with 18 Health.
-
-Orderus hits Bear for 32 damage leaving them with 5 Health.
-
-Bear hits Orderus for 17 damage leaving them with 1 Health.
-
-Bear got lucky and dodged an attack from Orderus. His current health is 5
-
-Bear hits Orderus for 17 damage leaving them with 0 Health.
-
-Our hero Orderus lost the fight with Bear after fighting heroically for 6 rounds!
+![N|Solid](https://i.imgur.com/RzESh26.png)
