@@ -1,0 +1,11 @@
+{
+    "name": "antiqque/hero-game",
+    "require": {
+        "phpunit/phpunit": "^7.1"
+    },
+    "autoload":{
+        "psr-4":{
+            "Game\\": "src/Game"
+        }
+    }
+}
